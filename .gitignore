@@ -41,17 +41,15 @@ venv.bak/
 *.sqlite3
 
 # Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env*
+!.env.example
 
-# IDE
+# IDE and Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
 
 # OS generated files
 .DS_Store
@@ -78,3 +76,39 @@ dist-ssr/
 # Model files (if they're large)
 vosk-model-*/
 *.model
+
+# Temporary and test files
+test_*.py
+debug_*.py
+check_*.py
+*_test.py
+*_debug.py
+temp/
+tmp/
+
+# Batch and script files (development only)
+*.bat
+*.sh
+setup_*.py
+start_*.py
+install_*.py
+
+# Documentation (keep only README.md)
+*_SUMMARY.md
+*_GUIDE.md
+*_FIX*.md
+*_PLAN.md
+HOW_TO_*.md
+SETUP_GUIDE.md
+TROUBLESHOOTING.md
+
+# Workspace and config files
+*.code-workspace
+.workspace
+
+# Old or backup folders
+old/
+backup/
+bak/
+deprecated/
+unused/
