@@ -1,0 +1,112 @@
+/* Mobile Responsive Fixes */
+
+/* Fix button spacing and layout */
+@media (max-width: 968px) {
+  /* Better login/register button layout */
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .nav-links .btn {
+    padding: 8px 16px !important;
+    font-size: 14px !important;
+    margin: 0 4px !important;
+    min-width: auto;
+  }
+  
+  /* Home page button improvements */
+  .home-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+  
+  .home-buttons .btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  /* Assessment cards responsive grid */
+  .assessment-cards {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 15px !important;
+  }
+  
+  .assessment-card {
+    width: 100% !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Hide login/register on very small screens - they'll be in hamburger */
+  .nav-links .btn {
+    display: none !important;
+  }
+  
+  /* Compact navbar */
+  .navbar {
+    padding: 8px 0 !important;
+  }
+  
+  .navbar-content {
+    padding: 0 12px !important;
+  }
+  
+  .logo {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  .logo-image {
+    height: 40px !important;
+  }
+  
+  /* Better mobile buttons */
+  .btn {
+    padding: 14px 20px !important;
+    font-size: 16px !important;
+    width: 100% !important;
+    margin: 8px 0 !important;
+    border-radius: 10px !important;
+  }
+  
+  /* Card improvements */
+  .card {
+    margin: 12px 0 !important;
+    padding: 20px 16px !important;
+    border-radius: 12px !important;
+  }
+  
+  /* Typography scaling */
+  h1 {
+    font-size: 2.2rem !important;
+  }
+  
+  h3 {
+    font-size: 1.3rem !important;
+  }
+  
+  p {
+    font-size: 15px !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Theme toggle positioning fix */
+@media (max-width: 968px) {
+  .theme-toggle {
+    position: fixed;
+    top: 15px;
+    right: 60px;
+    z-index: 9997;
+  }
+}
