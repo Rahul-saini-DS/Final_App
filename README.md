@@ -70,6 +70,8 @@ Final_App/
 ### Backend Setup
 ```bash
 cd new_backend
+conda create -n env python=3.10 -y
+conda activate
 pip install -r requirements.txt
 python app.py
 ```
