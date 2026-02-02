@@ -8,7 +8,7 @@ import SummaryInsights from '../components/charts/SummaryInsights';
 
 export default function ResultsPage() {
   const location = useLocation();
-  const { scores, totalScore, ageGroup, childId, resultId, detailedScoring } = location.state || {};
+  const { scores, totalScore, ageGroup, childId, detailedScoring } = location.state || {};
 
   // DEBUG: Log what we receive
   console.log('ResultsPage received:', { scores, totalScore, ageGroup, detailedScoring });
