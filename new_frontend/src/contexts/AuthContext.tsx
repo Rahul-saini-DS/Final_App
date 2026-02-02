@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+// If you are using hooks like useState, just import them directly:
+import { createContext, useState, useContext } from 'react';
 import axios from 'axios';
 
 const API_BASE_URL = 'http://localhost:5000/api';
