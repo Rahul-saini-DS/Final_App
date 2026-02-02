@@ -1,0 +1,43 @@
+name: Basic CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # Job 1: Check the Backend
+  build-backend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.10"
+    - name: Install Dependencies
+      # We enter the folder because your requirements are inside 'new_backend'
+      run: |
+        cd new_backend
+        pip install -r requirements.txt
+    - name: Run Basic Linting
+      # flake8 checks for syntax errors in your python code
+      run: |
+        pip install flake8
+        flake8 new_backend --count --select=E9,F63,F7,F82 --show-source --statistics
+
+  # Job 2: Check the Frontend
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - name: Install and Build
+      run: |
+        cd new_frontend
+        npm install
+        npm run build
