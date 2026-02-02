@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import CameraAssessment from '../components/ai/CameraAssessment';
@@ -189,7 +189,6 @@ export default function AssessmentPage() {
         maxScore: intelligenceQuestions.length + 2, // Correct max score: intelligence questions + 2 binary tasks
         ageGroup: ageGroup,
         childId: response.data.child_id,
-        resultId: response.data.result_id
       };
 
       // DEBUG: Log what we're sending
